@@ -7,16 +7,22 @@
   padding: 1rem;
   background-color: #f8f8f8;
   position: relative;
+  min-height: 4rem;
 }
 
 .menu {
   display: flex;
   gap: 2rem;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .menu li {
   cursor: pointer;
+  padding: 0.5rem 0;
+  min-width: 4rem;
+  text-align: center;
 }
 
 .hamburger {
@@ -28,6 +34,8 @@
   font-size: 1rem;
   position: relative;
   z-index: 2;
+  min-width: 5rem;
+  text-align: center;
 }
 
 /* Mobile styles */
@@ -49,6 +57,7 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     visibility: hidden;
     z-index: 1;
+    min-height: 12rem;
   }
 
   .menu.open {
@@ -57,6 +66,11 @@
   }
 
   .menu li {
-    padding: 0.5rem 0;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .menu li:last-child {
+    border-bottom: none;
   }
 }
