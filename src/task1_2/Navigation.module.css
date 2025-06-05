@@ -1,0 +1,62 @@
+/* Reset default styles are handled by global CSS */
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  position: relative;
+}
+
+.menu {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.menu li {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  padding: 0.5rem 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* Mobile styles */
+@media (max-width: 767.98px) {
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    padding: 1rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  .menu.open {
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .menu li {
+    padding: 0.5rem 0;
+  }
+}
